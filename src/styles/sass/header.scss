@@ -1,0 +1,214 @@
+@import "general.scss";
+// general
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 23px;
+	height: 60px;
+
+	.nav__item,
+	&__burger-line,
+	&__menu-title {
+		color: var(--beige-968a);
+		text-transform: uppercase;
+		transition: color 0.3s linear;
+	}
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		padding: 13px 0;
+		width: 35.5%;
+		font-family: var(--DINProBold);
+		transition: color 0.3s linear;
+	}
+	&__logo {
+		margin: 10px 10px 0 16px;
+		width: 219px;
+		height: 66px;
+		z-index: 2;
+	}
+
+	&__contact {
+		display: flex;
+		flex-direction: column;
+	}
+	&__menu {
+		position: relative;
+		cursor: pointer;
+	}
+
+	// burger menu
+	&__burger {
+		position: relative;
+		margin-top: 3px;
+		width: 29px;
+		height: 17px;
+		z-index: 6;
+	}
+	&__menu-title {
+		font-size: 9px;
+	}
+	&__burger-line,
+	&__burger::before,
+	&__burger::after {
+		right: 0;
+		position: absolute;
+		height: 2px;
+		transition: all 0.3s linear;
+		background-color: var(--beige-968a);
+	}
+	&__burger::before {
+		width: 28px;
+	}
+	&__burger-line {
+		width: 23px;
+	}
+	&__burger::after {
+		width: 17px;
+	}
+	&__burger::before,
+	&__burger::after {
+		content: "";
+	}
+	&__burger::before {
+		top: 0;
+	}
+	&__burger::after {
+		bottom: 0;
+	}
+	&__burger-line {
+		top: 50%;
+		transform: scale(1) translate(0px, -50%);
+	}
+	&__burger-points {
+		position: absolute;
+		left: -330px;
+		top: 47px;
+		width: 300px;
+		background-color: rgba(255, 255, 255, 0.9);
+		padding: 20px;
+		transition: all 0.5s linear;
+		z-index: 5;
+		box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+	}
+	&__burger-item {
+		display:block;
+		margin-bottom: 12px;
+		color: var(--beige-968a);
+		transition: color .3s linear;
+	}
+
+	// burger active
+
+	&__burger._active span {
+		transform: scale(0) translate(0px, -50%);
+	}
+	&__burger._active::before {
+		width: 80%;
+		top: 50%;
+		transform: rotate(-45deg) translate(0px, -50%);
+	}
+	&__burger._active::after {
+		width: 80%;
+		bottom: 50%;
+		transform: rotate(45deg) translate(0px, 50%);
+	}
+
+	&__burger-points._active {
+		left: -23px;
+	}
+
+	//  navigation
+	&__nav {
+		display: flex;
+		align-items: center;
+	}
+
+
+}
+
+.nav__item {
+	position: relative;
+	font-size: 12px;
+	&--active {
+		font-family: var(--DINProMedium);
+	}
+	&--active::after {
+		content: url("../../images/arrow-down.svg");
+		position: absolute;
+		bottom: -17px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&:nth-child(2n) {
+		margin-left: 28px;
+	}
+	&:nth-child(2n + 1) {
+		margin-right: 28px;
+	}
+	&:nth-child(2n)::before {
+		content: url("../../images/rhomb.png");
+		position: absolute;
+		left: -28px;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: default;
+	}
+}
+
+// contact
+
+.contact {
+	padding-top: 5px;
+	&__phone {
+		margin-bottom: 4px;
+		font-size: 16px;
+		color: var(--grey-3c);
+	}
+	&__order-call {
+		font-size: 11px;
+		color: var(--yellow-b9);
+		text-decoration: underline;
+		text-transform: uppercase;
+		align-self: flex-end;
+		transition: color .3s linear;
+	}
+}
+
+// hover focus
+
+.header {
+	&__menu:hover &__burger::before,
+	&__menu:hover &__burger::after,
+	&__menu:hover &__burger-line,
+	&__menu:focus-visible &__burger::before,
+	&__menu:focus-visible &__burger::after,
+	&__menu:focus-visible &__burger-line {
+		background-color: var(--brown-70);
+	}
+	&__menu:active &__burger::before,
+	&__menu:active &__burger::after,
+	&__menu:active &__burger-line {
+		background-color: var(--brown-42);
+	}
+	.contact:hover .contact__order-call,
+	&__menu:hover &__menu-title,
+	&__burger-item:hover,
+	.contact__order-call:focus-visible,
+	&__menu:focus-visible &__menu-title,
+	&__burger-item:focus-visible {
+		color: var(--brown-42);
+	}
+
+	.nav {
+		&__item:hover {
+			color: var(--brown-70);
+		}
+		&__item:focus-visible {
+			color: var(--brown-42);
+		}
+		&__item:active {
+			color: var(--brown-70);
+		}
+	}
+}

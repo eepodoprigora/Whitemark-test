@@ -1,0 +1,126 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+address,
+img,
+ul,
+li,
+article,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+* {
+	box-sizing: border-box;
+}
+a:focus, button:focus, div:focus{
+outline: none;
+border: none;
+}
+img {
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+}
+body {
+	font-family: var(--DINProBold);
+}
+
+@font-face {
+	font-family: "CharterC";
+	font-style: normal;
+	font-weight: 400;
+	src: local("CharterC"), url("/fonts/CharterC.woff2") format("woff2"), url("/fonts/CharterC.woff") format("woff");
+}
+
+@font-face {
+	font-family: "DINProBold";
+	font-style: normal;
+	font-weight: 700;
+	src: local("DINProBold"), url("/fonts/DINProBold.woff2") format("woff2"),
+		url("/fonts/DINProBold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "DINProMedium";
+	font-style: normal;
+	font-weight: 500;
+	src: local("DINProMedium"), url("/fonts/DINProMedium.woff2") format("woff2"),
+		url("/fonts/DINProMedium.woff") format("woff");
+}
+
+@font-face {
+	font-family: "DINProRegular";
+	font-style: normal;
+	font-weight: 400;
+	src: local("DINProRegular"), url("/fonts/DINProRegular.woff2") format("woff2"),
+		url("/fonts/DINProRegular.woff") format("woff");
+}
+
+:root {
+	--beige-968a: #968a7c;
+	--beige-9685: #968571;
+	--beige-f1: #f1ece0;
+	--beige-e2: #e2d8c0;
+	--beige-da: #dad4cb;
+	--blue-be: #becdd4;
+	--blue-df: #dfe6ea;
+	--brown-42: #422510;
+	--brown-70: #706049;
+	--green-af: #afcb9c;
+	--green-b0: #b0cc9d;
+	--green-d8: #d8e6ce;
+	--grey-3c: #3c3a33;
+	--pink-c2: #c2b3c6;
+	--pink-c26: #c26e79;
+	--pink-d7: #d70d2e;
+	--pink-9a: #9a0e20;
+	--pink-e9: #e9bdd9;
+	--pink-e6: #e6c3c7;
+	--violet-c3: #c3b4c7;
+	--violet-e1: #e1dae3;
+	--white: #ffffff;
+	--yellow-b9: #b99c56;
+	--yellow-e2: #e2d8bf;
+
+	--CharterC: "CharterC", sans-serif;
+	--DINProBold: "DINProBold", sans-serif;
+	--DINProMedium: "DINProMedium", sans-serif;
+	--DINProRegular: "DINProRegular", sans-serif;
+}
